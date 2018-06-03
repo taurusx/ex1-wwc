@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="utf-8">
+    <title>WWC | Exercise 1</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+    <meta name="description" content="Weekly Webdev Challenge - Exercise 1">
+    <meta name="author" content="taurusx">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <base href="https://github.com/taurusx/ex1-wwc/" target="_blank"> -->
+
+    <body>
+        <div>
+            <!-- Logo area -->
+            <div class="logo logo--horiz">
+                <img class="logo__img shadowed" src="./img/logo.png" alt="Logo Masteralb Creative">
+                <img class="logo__img shadowed" src="./img/logo2.png" alt="Logo Masteralb Creative">
+            </div>
+            
+            <!-- Forms area -->
+            <div id="flex-grid">
+                <!-- Form1 - Registration -->
+                <div id="form1" class="form-container">
+                    <p>Register Form</p>
+                    <div class="form-wrap">
+                        <form>
+                            <input class="field bg-icon bg-icon--user" type="text" name="username" placeholder="Username">
+                            <input class="field bg-icon bg-icon--lock" type="password" name="password1" placeholder="Password">
+                            <input class="field bg-icon bg-icon--lock" type="password" name="password2" placeholder="Confirm Password">
+                            <input class="field bg-icon bg-icon--email" type="email" name="user-email" placeholder="Email">
+                            <div class="field field--last bg-icon bg-icon--pin custom-select">
+                                <select name="location">
+                                    <option value="" disabled selected>Your Location</option>
+                                    <option value="Home">Home</option>
+                                    <option value="School">School / College / University</option>
+                                    <option value="Work">Work</option>
+                                    <option value="Abroad">Abroad</option>
+                                    <option value="Space">Space</option>
+                                </select>
+                                <div class="select-arrow"></div>
+                            </div>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="accept-terms">
+                                <span class="checkmark"></span>I have read and accept the terms of use.
+                            </label>
+                            <button class="btn btn--100" type="submit">Sign up</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form2 - Message -->
+                <div id="form2" class="form-container">
+                    <p>Send Email</p>
+                    <div class="form-wrap">
+                        <form>
+                            <input class="field bg-icon bg-icon--user" type="text" name="username" placeholder="Your Name">
+                            <input class="field bg-icon bg-icon--email" type="text" name="user-email" placeholder="Your Email">
+                            <textarea class="field field--textarea field--last" name="user-message" placeholder="Type your message ..." rows="10"></textarea>
+                            <label class="checkbox-container">
+                                <input type="checkbox" name="send-email" checked>
+                                <span class="checkmark"></span>
+                                <span>Send a copy to my Email</span>
+                            </label>
+                            <button class="btn btn--100" type="submit">Send Email</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form3 - Sign in -->
+                <div id="form3" class="form-container">
+                    <p>Sign In Form</p>
+                    <div class="form-wrap">
+                        <form>
+                            <input class="field bg-icon bg-icon--user" type="text" name="username" placeholder="Username">
+                            <input class="field bg-icon bg-icon--lock field--last" type="password" name="password" placeholder="Password">
+                            <div class="btn-group">
+                                <label class="checkbox-container">
+                                <input type="checkbox" name="send-email" checked>
+                                <span class="checkmark"></span>Remember me
+                                </label>
+                                <button class="btn btn--50 btn--small-font" type="submit">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form4 - Recovery -->
+                <div id="form4" class="form-container">
+                    <p>Recover Form</p>
+                    <div class="form-wrap">
+                        <form>
+                            <input class="field bg-icon bg-icon--email" type="text" name="email-recover" placeholder="Enter your Email">
+                            <input class="field field--last bg-icon bg-icon--phone" type="number" name="phone-recover" placeholder="Enter your Phone number">
+                            <div class="btn-group">
+                                <button class="btn btn--50 btn--small-font" type="submit">Send</button>
+                                <button class="btn btn--50 btn--small-font btn--inactive" type="button">Done</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Form5 - Subscription -->
+                <div id="form5" class="form-container">
+                    <p>Subscribe Form</p>
+                    <div class="form-wrap">
+                        <form>
+                            <input class="field field--last bg-icon bg-icon--email" type="email" name="subscribe-email" placeholder="Enter your Email">
+                            <div class="btn-group">
+                                <button class="btn btn--50 btn--small-font" type="submit">Subscribe</button>
+                                <button class="btn btn--50 btn--small-font btn--red" type="button">No, Thanks</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Logo - Footer -->
+                <div class="logo logo--vertic">
+                    <div class="logo logo--horiz logo--shrink">
+                        <img class="logo__img shadowed" src="./img/logo.png" alt="Logo Masteralb Creative">
+                        <img class="logo__img shadowed" src="./img/logo2.png" alt="Logo Masteralb Creative">
+                    </div>
+                    <img class="logo__img logo__img--address shadowed" src="./img/logo3.png" alt="Masteralb Webpage address">
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<!-- DROP SHADOW LOGO for Firefox (pre v35) (???) -->
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="1"/>
+        <feOffset dx="0" dy="-3" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
