@@ -49,6 +49,19 @@ table {
 }
 /* --- END OF: RESET.CSS --- */
 
+/* --- BOX-SIZING RESET --- */
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+/* --- END OF: BOX-SIZING RESET --- */
+
 /* --- GENERAL --- */ 
 body {
     font-family: 'Titillium Web', sans-serif;
@@ -76,18 +89,16 @@ body > div {
     justify-content: center;
     align-items: center;
     padding-top: 50px;
-    margin-bottom: 10px;
 }
 
 .logo--horiz {
-    height: 120px;
+    height: 170px;
     width: 100%;
 }
 
 .logo__img {
     position: relative;
     display: block;
-    box-sizing: border-box;
     max-width: 100%;
     max-height: 100%;
     opacity: 0.3;
@@ -97,22 +108,21 @@ body > div {
 
 .logo--vertic {
     flex-direction: column;
-    box-sizing: content-box;
     width: 380px;
     max-height: 400px;
-    padding: 20px;
+    padding-top: 0px;
 }
 
 .logo--shrink {
     display: flex;
     justify-content: center;
-    max-width: 380px;
-    max-height: 75px;
-    padding: 20px;
+    max-width: 100%;
+    max-height: 120px;
 }
 
 .logo__img--address {
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 
@@ -129,6 +139,7 @@ body > div {
     align-content: space-around;
     align-items: center;
 }
+/* --- END OF: GENERAL --- */ 
 
 /* --- FORMS AND FIELDS --- */
 .form-container, form, button, 
@@ -140,9 +151,9 @@ body > div {
 .form-container {
     position: relative;
     flex: none;
-    width: 380px;
-    /* box-sizing: border-box; */
-    padding: 20px;
+    width: 420px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .form-container > p {
@@ -177,7 +188,6 @@ form > * {
 }
 
 .field {
-    box-sizing: border-box;
     margin-top: 10px;
     margin-bottom: 10px;
     height: 40px;
@@ -275,7 +285,7 @@ form > * {
 
 .btn-group > .checkbox-container {
     display: inline-block;
-    width: 40%;
+    width: 50%;
 }
 
 /* --- END OF: BUTTONS --- */
