@@ -207,6 +207,9 @@ form > * {
 .field--textarea {
     height: 230px;
     padding-left: 10px;
+    resize: vertical;
+    min-height: 150px;
+    max-height: 300px;
 }
 
 .bg-icon {
